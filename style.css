@@ -108,7 +108,7 @@ button[disabled] {
   padding-top: 15px;
   padding-left: 15px;
   padding-right: 15px;
-  padding-bottom: 85px;
+  padding-bottom: 15px;
   font-size: 1.2rem;
   text-align: center;
   margin-top: 10px;
@@ -117,6 +117,12 @@ button[disabled] {
   border-radius: 6px;
   resize: none;
   overflow: hidden;
+}
+
+#choices li {
+  display:inline;
+  margin: 10px 10px;
+  background-color: lightgrey; 
 }
 
 @media (max-width: 690px) {
@@ -137,6 +143,7 @@ button[disabled] {
   }
 }
 
+/* "Price Range" slider by onyx1812 https://codepen.io/onyx1812/pen/GRJxmva */
 input[type=range] {
 	-webkit-appearance: none;
 	margin: 20px 0;

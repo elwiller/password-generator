@@ -16,37 +16,38 @@
         <div class="card-header">
           <h2>Generate a Password</h2>
         </div>
-        <div class="card-body">
-          <container readonly id="options" aria-label="Generated Password" style="padding-bottom: 15px;">
-            Select the characters that you want included in your password by checking or unchecking the appropriate box:
+        <div class="card-body"> <!-- options window -->
+          <container id="options" aria-label="Generated Password" style="padding-bottom: 15px;">
+            Select the character sets that you want included in your password<br>by checking or unchecking the appropriate box:
             <ul id="choices" style="list-style-type:none">
-              <li style="display:inline; margin: 10px 10px; background-color: lightgrey; padding-left: 7px;">
+              <li style="padding-left: 7px;">
                 <label for="lower"> Lowercase Letters (abc)</label>
-                <input type="checkbox" id="lower" name="lower" value="true" checked>
+                <input type="checkbox" id="lower" name="lower" checked>
               </li>
-              <li style="display:inline; margin: 10px 10px; background-color: lightgrey; padding: 0 7px;">
+              <li style="padding: 0 7px;">
                 <label for="upper">Uppercase Letters (ABC)</label>
-                <input type="checkbox" id="upper" name="upper" value="true" checked>
+                <input type="checkbox" id="upper" name="upper" checked>
               </li>
             <br><br>
-              <li style="display:inline; margin: 10px 10px; background-color: lightgrey; padding-left: 7px;">
+              <li style="padding-left: 7px;">
                 <label for="numbers">Numbers (123)</label>
-                <input type="checkbox" id="number" name="number" value="true" checked>
+                <input type="checkbox" id="number" name="number" checked>
               </li>
-              <li style="display:inline; margin: 10px 10px; background-color: lightgrey; padding: 0 7px;">
+              <li style="padding: 0 7px;">
                 <label for="special">Special Characters (!@#)</label>
-                <input type="checkbox" id="special" name="special" value="true" checked>
+                <input type="checkbox" id="special" name="special" checked>
               </li>
             </ul>
             Select the length of your password in characters from 8 to 128:
             <br><br>
+            <!-- "Price Range" slider by onyx1812 https://codepen.io/onyx1812/pen/GRJxmva -->
             <div class="range-wrap" style="margin: auto;">
               <div class="range-value" id="rangeV"></div>
               <input id="range" type="range" min="8" max="128" value="8">
             </div>
           </container>
         </div>
-        <div class="card-body" style="display:none">
+        <div id="pwdHolder" class="card-body" style="display:none">
           <textarea
             readonly
             id="password"
